@@ -14,7 +14,7 @@
 <h1 class="row">Cupcake Connoisseur</h1>
 
 <!-- Instructions -->
-<ul class="">
+<ul class="container">
 	<li>You will be given a random number at the start of the game.</li>
 	<li>There are four cupcakes below. By clicking on a cupcake you will add a specific amount of points to your total score.</li>
 	<li>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</li>
@@ -23,35 +23,38 @@
 </ul>
 
 <!-- Game -->
-<div id="game">
+<div class="container" id="game">
 
 	<!-- Both Number Boxes -->
-	<div id="bothNumbers" class="row">
+	<div id="bothNumbers" class="row container">
 	<!-- Random Number -->
-	  <div>
+	  <div class="col-md-3">
 		<h4>Baker's Number</h4>
 		<div id="randomNumber">xx</div>
 	  </div>
 	<!-- User Number -->
-	  <div>
+	  <div class="col-md-3">
 		<h4>Your Total</h4>
-		<div id="userTotal">xx</div>
+		<div id="userTotal">0</div>
+	  </div>
+	<!-- Wins/Losses -->
+	  <div class="col-md-3 col-md-offset-3">
+		<h5 id="wins">Wins: </h5>
+		<h5 id="losses">Losses: </h5>
 	  </div>
 	</div>
 
 	<!-- Cupcake Buttons -->
-	<div id="buttons">
+	<div id="buttons" class="row container">
 		<img class="cupcake" id="rainbow" src="assets/images/rainbow.png">
 		<img class="cupcake" id="pink" src="assets/images/pink.png">
 		<img class="cupcake" id="red" src="assets/images/red.png">
 		<img class="cupcake" id="chocolate" src="assets/images/chocolate.png">
 	</div>
 
-	<!-- Wins/Losses -->
-	<h5 id="wins">Wins: </h5>
-	<h5 id="losses">Losses: </h5>
-
 </div>
+
+<button>test</button>
 
 </body>
 </html>

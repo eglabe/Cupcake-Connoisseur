@@ -26,7 +26,7 @@ function reset() {
 	pink = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
 	red = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
 	chocolate = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
-};
+}; 
 
 
 // Set event on clicking a cupcake.

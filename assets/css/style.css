@@ -1,12 +1,32 @@
-#bothNumbers {
-	margin-left: 100px;
-}
-
-
 h1 {
 	text-align: center;
 }
 
 ul {
-	padding: 10px 30px;
+	padding: 0 60px;
+	background-color: lightblue;
+}
+
+#game {
+	border: 3px solid purple;
+}
+
+	#bothNumbers {
+		background-color: pink;
+		border-bottom: 5px solid violet;
 	}
+
+.col-md-3 {
+	float: left;
+}
+
+#randomNumber,
+#userTotal {
+	font-size: 35px;
+	text-align: center;
+}
+
+#buttons {
+	clear: both;
+	text-align: center;
+}
