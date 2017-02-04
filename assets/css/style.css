@@ -1,3 +1,7 @@
+body {
+	background-image: url(../images/confectionary.png);
+}
+
 h1 {
 	text-align: center;
 }
@@ -11,13 +15,16 @@ ul {
 	border: 3px solid purple;
 }
 
-	#bothNumbers {
-		background-color: pink;
-		border-bottom: 5px solid violet;
-	}
+h4 {
+	text-align: center;
 
-.col-md-3 {
-	float: left;
+}
+.col-sm-3 {
+	background-color: pink;
+	padding: 10px;
+	border: 2px solid black;
+	padding: 10px 20px;
+	margin: 0px 30px;
 }
 
 #randomNumber,
