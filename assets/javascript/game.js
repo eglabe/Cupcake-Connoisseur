@@ -21,7 +21,7 @@ $( document ).ready(function() {
 	var chocolate = {
 		value: cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)] };
 
-	// console.log(rainbow);
+	console.log(rainbow);
 	// console.log(pink);
 	// console.log(red);
 	// console.log(chocolate);
@@ -38,22 +38,21 @@ $( document ).ready(function() {
 
 	// Set event on clicking a cupcake.
 	$("#rainbow").on("click", function() {
-		alert("yay");
+		userScore.push(rainbow.value); // NEEDS TO ADD!!!
+		console.log(rainbow.value);
+		console.log("score:" + userScore);
+		// $("#userTotal").push(userScore);
 	});
 
-	// Assign cupcake var value to the click.
+	$("#pink").on("click", function() {
+		userScore.push(pink.value); // NEEDS TO ADD!!!
+		console.log(pink.value);
+		console.log("score:" + userScore);
+	});
 
-
-	// When a cupcake is clicked, it's value is added to the user's score.
-
-
-	// When the user's score == the baker's number, the user wins & adds to wins counter.
-
-
-	// If user score > baker's number, the user loses & adds to losses counter.
-
-
-	// If user wins/loses: baker's number and cupcake values regenerate, user score back to 0.
+// add all of the integers in userScore array
+// display userScore on webpage
+// display bakerNumber on webpage
 
 });
 
