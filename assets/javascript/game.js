@@ -26,15 +26,16 @@ $( document ).ready(function() {
 
 // Function to reset the game.
 	function reset () {
-		userScore = 0;
+		game.userScore = 0;
 		bakerNumber = getRandomNumber(19, 120);
-		rainbow = getRandomNumber(1, 12);
-		pink = getRandomNumber(1, 12);
-		red = getRandomNumber(1, 12);
-		chocolate = getRandomNumber(1, 12);
+		document.querySelector("#randomNumber").innerHTML = bakerNumber;
+		rainbow = $("#rainbow").attr("value", getRandomNumber(1, 12));
+		pink = $("#pink").attr("value", getRandomNumber(1, 12));
+		red = $("#red").attr("value", getRandomNumber(1, 12));
+		chocolate = $("#chocolate").attr("value", getRandomNumber(1, 12));
 	}
 
-// Display variables in HTML.
+// Display variables in HTML. -- unable to make it this work this way.
 	// $(game.wins).text("#wins");
 	// $(game.losses).text("#losses");
 	// $(game.userScore).text("#userTotal");
