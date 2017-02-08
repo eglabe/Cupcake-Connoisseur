@@ -24,33 +24,36 @@
 <div class="container" id="game">
 
 	<!-- Both Number Boxes -->
-	<div id="bothNumbers" class="row container">
-	<!-- Random Number -->
-	  <div class="col-sm-3">
-		<h4>Baker's Number</h4>
-		<div id="randomNumber">xx</div>
-	  </div>
-	<!-- User Number -->
-	  <div class="col-sm-3">
-		<h4>Your Total</h4>
-		<div id="userTotal">0</div>
-	  </div>
-	<!-- Wins/Losses -->
-	  <div class="col-sm-3">
-		<h5 id="wins">Wins: 0</h5>
-		<h5 id="losses">Losses: 0</h5>
-	  </div>	
+	<div id="scoreBoard">
+		<div id="bothNumbers" class="">
+		<!-- Random Number -->
+		  <div class="box">
+			<h4>Baker's Number</h4>
+			<div id="randomNumber"></div>
+		  </div>
+		<!-- User Number -->
+		  <div class="box">
+			<h4>Your Total</h4>
+			<div id="userTotal">0</div>
+		  </div>
+		</div>
+			<!-- Wins/Losses -->
+		<div class="box winloss">
+		  <h5 id="wins">Wins: 0</h5>
+		  <h5 id="losses">Losses: 0</h5>
+		</div>	
 	</div>
 
+</div>
 	<!-- Cupcake Buttons -->
-	<div id="buttons" class="row container">
+	<div id="buttons" class="container">
 		<img class="cupcake" id="rainbow" src="assets/images/rainbow.png">
 		<img class="cupcake" id="pink" src="assets/images/pink.png">
 		<img class="cupcake" id="red" src="assets/images/red.png">
 		<img class="cupcake" id="chocolate" src="assets/images/chocolate.png">
 	</div>
 
-</div>
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>

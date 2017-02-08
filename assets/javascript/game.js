@@ -15,7 +15,7 @@ $( document ).ready(function() {
 
 // The given random number that the user must match to win.
 	var bakerNumber = getRandomNumber(19, 120);
-// Displays the random Backer's number in HTML.
+// Displays the random Baker's number in HTML.
 	document.querySelector("#randomNumber").innerHTML = bakerNumber;
 
 // Generating random numbers and setting them as the cupcake values.
@@ -34,14 +34,6 @@ $( document ).ready(function() {
 		red = $("#red").attr("value", getRandomNumber(1, 12));
 		chocolate = $("#chocolate").attr("value", getRandomNumber(1, 12));
 	}
-
-// Display variables in HTML. -- unable to make it this work this way.
-	// $(game.wins).text("#wins");
-	// $(game.losses).text("#losses");
-	// $(game.userScore).text("#userTotal");
-	// $(bakerNumber).text("#randomNumber");
-
-
 
 // When the user clicks on one of the cupcakes...
 	$(".cupcake").on("click", function(event) {
@@ -71,3 +63,8 @@ $( document ).ready(function() {
 
 });
 
+// Display variables in HTML. -- unable to make it this work this way.
+	// $(game.wins).text("#wins");
+	// $(game.losses).text("#losses");
+	// $(game.userScore).text("#userTotal");
+	// $(bakerNumber).text("#randomNumber");
