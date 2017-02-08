@@ -1,58 +1,72 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
 
-	var wins = 0;
-	var losses = 0;
-	var userScore = new Array;
+// Game scorekeeping values.
+	var game = {
+		wins: 0,
+		losses: 0,
+		userScore: 0
+	};
 
-	var randomNumber = []
-		for (var i = 19; i <= 120; i++) {
-		randomNumber.push(i) };
-	var bakerNumber = randomNumber[Math.floor(Math.random() * randomNumber.length)];
-	console.log(bakerNumber);
+// Function for generating a random number.
+	function getRandomNumber(minValue, maxValue){
+		return Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+	}
 
-	var cupcakeValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-	var rainbow = {
-		value: cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)] };
-	var pink = {
-		value: cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)] };
-	var red = {
-		value: cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)] };
-	var chocolate = {
-		value: cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)] };
+// The given random number that the user must match to win.
+	var bakerNumber = getRandomNumber(19, 120);
+// Displays the random Backer's number in HTML.
+	document.querySelector("#randomNumber").innerHTML = bakerNumber;
 
-	console.log(rainbow);
-	// console.log(pink);
-	// console.log(red);
-	// console.log(chocolate);
+// Generating random numbers and setting them as the cupcake values.
+	var rainbow = $("#rainbow").attr("value", getRandomNumber(1, 12));
+	var pink = $("#pink").attr("value", getRandomNumber(1, 12));
+	var red = $("#red").attr("value", getRandomNumber(1, 12));
+	var chocolate = $("#chocolate").attr("value", getRandomNumber(1, 12));
 
-	function reset() {
+// Function to reset the game.
+	function reset () {
 		userScore = 0;
-		bakerNumber = randomNumber[Math.floor(Math.random() * randomNumber.length)];
-		rainbow = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
-		pink = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
-		red = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
-		chocolate = cupcakeValues[Math.floor(Math.random() * cupcakeValues.length)];
-	}; 
+		bakerNumber = getRandomNumber(19, 120);
+		rainbow = getRandomNumber(1, 12);
+		pink = getRandomNumber(1, 12);
+		red = getRandomNumber(1, 12);
+		chocolate = getRandomNumber(1, 12);
+	}
+
+// Display variables in HTML.
+	// $(game.wins).text("#wins");
+	// $(game.losses).text("#losses");
+	// $(game.userScore).text("#userTotal");
+	// $(bakerNumber).text("#randomNumber");
 
 
-	// Set event on clicking a cupcake.
-	$("#rainbow").on("click", function() {
-		userScore.push(rainbow.value); // NEEDS TO ADD!!!
-		console.log(rainbow.value);
-		console.log("score:" + userScore);
-		// $("#userTotal").push(userScore);
+
+// When the user clicks on one of the cupcakes...
+	$(".cupcake").on("click", function(event) {
+
+		// The cupcake value will be added to the User Score.
+		game.userScore += parseInt($(this).attr("value"));
+		
+		// If the user wins (matches their Score to the Baker's Number)
+		if (game.userScore === bakerNumber) {
+			alert("You won! Have your cupcake and eat it too!");
+			game.wins++;
+			reset();  // @TODO make this work -- not resetting
+		
+		// If the loses (User Score goes over the Backer's Number)
+		} else if (game.userScore > bakerNumber) {
+			alert(" Oh no, you've gone over! No cupcakes for you.");
+			game.losses++;
+			reset();  // @TODO make this work -- not resetting
+		}
+	
+// Display variables in HTML
+	document.querySelector("#wins").innerHTML = "Wins: " + game.wins;
+	document.querySelector("#losses").innerHTML = "Losses: " + game.losses;
+	document.querySelector("#userTotal").innerHTML = game.userScore;
+
 	});
-
-	$("#pink").on("click", function() {
-		userScore.push(pink.value); // NEEDS TO ADD!!!
-		console.log(pink.value);
-		console.log("score:" + userScore);
-	});
-
-// add all of the integers in userScore array
-// display userScore on webpage
-// display bakerNumber on webpage
 
 });
 
