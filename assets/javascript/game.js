@@ -53,13 +53,13 @@ $( document ).ready(function() {
 		if (game.userScore === bakerNumber) {
 			alert("You won! Have your cupcake and eat it too!");
 			game.wins++;
-			reset();  // @TODO make this work -- not resetting
+			reset();
 		
 		// If the loses (User Score goes over the Backer's Number)
 		} else if (game.userScore > bakerNumber) {
 			alert(" Oh no, you've gone over! No cupcakes for you.");
 			game.losses++;
-			reset();  // @TODO make this work -- not resetting
+			reset();
 		}
 	
 // Display variables in HTML
