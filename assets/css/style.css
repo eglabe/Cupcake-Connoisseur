@@ -6,9 +6,8 @@ body {
 /*Cupcake Connoisseur*/
 h1 {
 	text-align: center;
-	font-family: "Georgia", Times, "Times New Roman", serif;
+	font-family: 'Lobster', cursive;
     text-shadow: 0 0 20px pink;
-	font-style: italic;
 	margin-bottom: 20px;
 }
 
@@ -75,4 +74,9 @@ h4 {
 img {
  	-webkit-filter: drop-shadow(5px 5px 5px teal);
  	filter: drop-shadow(5px 5px 5px teal);
+}
+
+img:hover {
+	 -webkit-filter: drop-shadow(5px 5px 5px gold);
+ 	filter: drop-shadow(5px 5px 5px gold);
 }
