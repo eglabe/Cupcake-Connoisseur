@@ -1,2 +1,2 @@
-# week-4-game
-Crystal Collector
+# Cupcake Connoisseur
+JavaScript math game involving cupcakes and your addition skills.
